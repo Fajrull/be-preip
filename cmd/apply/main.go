@@ -7,7 +7,7 @@ import (
 	"github.com/sev-2/raiden/pkg/resource"
 	"github.com/sev-2/raiden/pkg/utils"
 	"github.com/spf13/cobra"
-	"aladinmallbatch/internal/bootstrap"
+	"mediversepreip/internal/bootstrap"
 )
 
 

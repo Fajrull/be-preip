@@ -4,21 +4,21 @@ import (
 	"github.com/sev-2/raiden"
 )
 
-type HelloWordRequest struct { // Add your request data 
+type HelloWorldRequest struct { // Add your request data 
 }
 
-type HelloWordResponse struct {
+type HelloWorldResponse struct {
 	Message string `json:"message"`
 }
 
-type HelloWordController struct {
+type HelloWorldController struct {
 	raiden.ControllerBase
-	Http	string `path:"/hello/{name}" type:"custom"`
-	Payload	*HelloWordRequest
-	Result	HelloWordResponse
+	Http	string `path:"/hello" type:"custom"`
+	Payload	*HelloWorldRequest
+	Result	HelloWorldResponse
 }
 
-func (c *HelloWordController) Get(ctx raiden.Context) error {
+func (c *HelloWorldController) Get(ctx raiden.Context) error {
 	c.Result.Message = "Welcome to raiden"
 	return ctx.SendJson(c.Result)
 }
