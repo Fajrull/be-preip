@@ -21,11 +21,6 @@ type AuthController struct {
 	Result  AuthResponse
 }
 
-func (c *AuthController) Get(ctx raiden.Context) error {
-	c.Result.Message = "(auth) welcome to raiden"
-	return ctx.SendJson(c.Result)
-}
-
 func (c *AuthController) Post(ctx raiden.Context) error {
 	c.Result.Message = "Login successful"
 	return ctx.SendJson(c.Result)

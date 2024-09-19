@@ -12,7 +12,7 @@ func RegisterRoute(server *raiden.Server) {
 		{
 			Type:       raiden.RouteTypeCustom,
 			Path:       "/auth/v1/token?grant_type=password",
-			Methods:    []string{fasthttp.MethodGet, fasthttp.MethodPost},
+			Methods:    []string{fasthttp.MethodPost},
 			Controller: &controllers.AuthController{},
 		},
 		{
