@@ -5,7 +5,7 @@ go 1.21.10
 require (
 	github.com/go-co-op/gocron/v2 v2.11.0
 	github.com/google/uuid v1.6.0
-	github.com/sev-2/raiden v1.0.0-beta.14
+	github.com/sev-2/raiden v1.0.0-beta.21
 	github.com/spf13/cobra v1.8.0
 	github.com/valyala/fasthttp v1.55.0
 )

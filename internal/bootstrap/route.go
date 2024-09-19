@@ -3,8 +3,8 @@ package bootstrap
 
 import (
 	"github.com/sev-2/raiden"
-	"mediversepreip/internal/controllers"
 	"github.com/valyala/fasthttp"
+	"mediversepreip/internal/controllers"
 )
 
 func RegisterRoute(server *raiden.Server) {
