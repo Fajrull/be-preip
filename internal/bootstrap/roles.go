@@ -3,9 +3,11 @@ package bootstrap
 
 import (
 	"github.com/sev-2/raiden/pkg/resource"
+	"mediversepreip/internal/roles"
 )
 
 func RegisterRoles() {
 	resource.RegisterRole(
+		&roles.SuperAdmin{},
 	)
 }
