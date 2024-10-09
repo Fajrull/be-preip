@@ -5,6 +5,7 @@ import (
 	"github.com/sev-2/raiden"
 	"github.com/valyala/fasthttp"
 	"mediversepreip/internal/controllers"
+	"mediversepreip/internal/models"
 )
 
 func RegisterRoute(server *raiden.Server) {
@@ -20,6 +21,20 @@ func RegisterRoute(server *raiden.Server) {
 			Path:       "/hello",
 			Methods:    []string{fasthttp.MethodGet},
 			Controller: &controllers.HelloWorldController{},
+		},
+		{
+			Type:       raiden.RouteTypeRest,
+			Path:       "/province",
+			Methods:    []string{},
+			Controller: &controllers.ProvinceController{},
+			Model:      models.Province{},
+		},
+		{
+			Type:       raiden.RouteTypeRest,
+			Path:       "/regency",
+			Methods:    []string{},
+			Controller: &controllers.RegencyControllers{},
+			Model:      models.Regency{},
 		},
 	})
 }
